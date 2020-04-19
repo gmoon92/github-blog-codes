@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.moong</groupId>
-    <artifactId>entity-audit-demo</artifactId>
+    <artifactId>spring-data-autied</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>entity-audit-demo</name>
+    <name>spring-data-autied</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
