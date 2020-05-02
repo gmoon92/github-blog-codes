@@ -1,4 +1,4 @@
 package com.moong.audited.repository;
 
-public class MemberRepository {
+public interface MemberRepository<Member, Long> {
 }
