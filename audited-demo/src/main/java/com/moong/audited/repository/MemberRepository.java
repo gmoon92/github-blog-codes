@@ -1,4 +1,8 @@
 package com.moong.audited.repository;
 
-public interface MemberRepository<Member, Long> {
+import com.moong.audited.domain.Member;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MemberRepository extends JpaRepository<Member, Long> {
+
 }
