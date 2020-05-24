@@ -1,6 +1,5 @@
 package com.moong.l2cache.domain;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,14 +10,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import java.util.List;
 
 import static lombok.AccessLevel.PROTECTED;
 
 @Entity
 @Getter
-@Setter(value = AccessLevel.PROTECTED)
+@Setter(value = PROTECTED)
 @NoArgsConstructor(access = PROTECTED)
-public class Member {
+public class Team {
 
     @Id
     @GeneratedValue
@@ -26,12 +26,12 @@ public class Member {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    private Team team;
+    @OneToMany(mappedBy = "team")
+    private List<Member> member;
 
-    public static Member newInstance(String username) {
-        Member member = new Member();
-        member.setName(username);
-        return member;
+    public static Team newTeam(String teamName) {
+        Team team = new Team();
+        team.setName(teamName);
+        return team;
     }
 }
