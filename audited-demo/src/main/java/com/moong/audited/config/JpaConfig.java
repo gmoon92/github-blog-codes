@@ -1,6 +1,6 @@
 package com.moong.audited.config;
 
-import com.moong.audited.properties.HibernateProperties;
+import com.moong.audited.config.properties.HibernateProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;

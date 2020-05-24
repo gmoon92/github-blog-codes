@@ -1,4 +1,4 @@
-package com.moong.audited.properties;
+package com.moong.audited.config.properties;
 
 import lombok.Getter;
 import lombok.Setter;
