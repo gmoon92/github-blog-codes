@@ -1,6 +1,8 @@
 package com.moong.audited.domain;
 
+import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.envers.Audited;
 
 import javax.persistence.Entity;
@@ -9,7 +11,8 @@ import javax.persistence.Id;
 
 @Entity
 @Audited
-@Setter
+@Setter @Getter
+@ToString
 public class Member {
 
     @Id
@@ -18,4 +21,9 @@ public class Member {
 
     private String name;
 
+    public static Member newMember(String name) {
+        Member newMember = new Member();
+        newMember.setName(name);
+        return newMember;
+    }
 }

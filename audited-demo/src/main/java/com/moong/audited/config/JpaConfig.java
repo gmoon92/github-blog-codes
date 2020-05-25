@@ -3,8 +3,10 @@ package com.moong.audited.config;
 import com.moong.audited.config.properties.HibernateProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -21,6 +23,7 @@ import java.util.Properties;
 @Configuration
 @EnableJpaAuditing
 @EnableTransactionManagement
+@Import( { HibernateJpaAutoConfiguration.class })
 @RequiredArgsConstructor
 public class JpaConfig {
 
